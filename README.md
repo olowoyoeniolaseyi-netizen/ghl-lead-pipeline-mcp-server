@@ -1,9 +1,10 @@
 # GHL Lead Pipeline MCP Server (built in n8n)
 
-> An MCP server that lets an AI assistant look up leads, read their AI scores, list today's new leads, and request CRM changes, with a human approving every write.
+An MCP server that lets an AI assistant look up leads, read their AI scores, list today's new leads, and request CRM changes, with a human approving every write.
 
-**Built by:** [Your full name] · [LinkedIn] · [Email]
-**Stack:** n8n (self-hosted) · Model Context Protocol (MCP) · GoHighLevel API · Google Sheets · Slack · MCP Inspector
+**Built by:** Oluwaseyi Olowoyo · [https://www.linkedin.com/in/oluwaseyi-olowoyo-a9b3a3217/] · [olowoyoeniolaseyi@gmail.com]
+
+**Stack:** n8n · Model Context Protocol (MCP) · GoHighLevel API · Google Sheets · Slack · MCP Inspector
 
 ![MCP Inspector showing the four tools](screenshots/01-inspector-tools.png)
 
@@ -11,9 +12,9 @@
 
 ## The story in one minute
 
-I had already built an automated lead-to-booking system ([ai-lead-qualification-n8n-ghl](https://github.com/olowoyoeniolaseyi-netizen/ai-lead-qualification-n8n-ghl)): a GoHighLevel form fires a webhook into n8n, an LLM scores the lead, a human approves it in Slack, and the CRM gets tagged. It worked, but only when a form was submitted. Nobody could simply *ask* it a question.
+I had already built an automated lead-to-booking system ([ai-lead-qualification-n8n-ghl](https://github.com/olowoyoeniolaseyi-netizen/ai-lead-qualification-n8n-ghl)): a GoHighLevel form fires a webhook into n8n, an LLM scores the lead, a human approves it in Slack, and the CRM gets tagged. It worked, but only when a form was submitted. Nobody could simply ask it a question.
 
-So I gave it a front door. This project wraps that pipeline in an **MCP server**, which means any MCP-compatible AI client can now say, in plain language, "Who is this lead, how hot are they, and what came in today?" and get real answers from live data. And when the AI wants to change something in the CRM, it can only ask. A human has to say yes.
+So I created a straightforward way to access it. This project wraps that pipeline in an **MCP server**, which means any MCP-compatible AI client can now say, in plain language, "Who is this lead, how hot are they, and what came in today?" and get real answers from live data. And when the AI wants to change something in the CRM, it can only ask. A human has to say yes.
 
 The interesting part wasn't connecting an AI to an API. It was deciding what an AI should be *allowed* to do, and building the guardrails to match.
 
@@ -104,7 +105,7 @@ I tested with [MCP Inspector](https://github.com/modelcontextprotocol/inspector)
 
 ## Run it yourself
 
-**Requirements:** an n8n instance (I used self-hosted 2.x), a GoHighLevel sub-account with a Private Integration token, a Google Sheet of scored leads keyed by contact ID, and a Slack workspace.
+**Requirements:** an n8n instance, a GoHighLevel sub-account with a Private Integration token, a Google Sheet of scored leads keyed by contact ID, and a Slack workspace.
 
 1. Import the workflows from [`/workflows`](workflows/) into n8n.
 2. Create credentials: GoHighLevel (Header Auth with `Authorization: Bearer <token>`), Google Sheets, Slack, and a Bearer Auth credential for the MCP server.
@@ -155,4 +156,4 @@ How MCP tools are discovered and described to a model, why tool names, descripti
 
 ---
 
-*Questions or ideas? [Your email] · [LinkedIn]*
+*Questions or ideas? [https://www.linkedin.com/in/oluwaseyi-olowoyo-a9b3a3217/] · [olowoyoeniolaseyi@gmail.com]*
