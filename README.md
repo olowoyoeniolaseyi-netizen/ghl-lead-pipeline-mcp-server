@@ -6,6 +6,10 @@ An MCP server that lets an AI assistant look up leads, read their AI scores, lis
 
 **Stack:** n8n · Model Context Protocol (MCP) · GoHighLevel API · Google Sheets · Slack · MCP Inspector
 
+[![Watch the demo](https://img.youtube.com/vi/E5gqNxgrvZM/hqdefault.jpg)](https://youtu.be/E5gqNxgrvZM)
+
+🎥 **[Watch the demo on YouTube](https://youtu.be/E5gqNxgrvZM)**
+
 ![MCP Inspector showing the four tools](screenshots/01-inspector-tools.png)
 
 ---
